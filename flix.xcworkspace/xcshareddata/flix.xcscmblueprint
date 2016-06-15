@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C4214263FC2931A52463E73F356FF64433033EAC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "77769D796CEEC9B9E7F7232BCCC23F97B9E3B55E" : 0,
+    "C4214263FC2931A52463E73F356FF64433033EAC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FD1782BD-09CF-456A-9359-129D053FA5ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "77769D796CEEC9B9E7F7232BCCC23F97B9E3B55E" : "",
+    "C4214263FC2931A52463E73F356FF64433033EAC" : "flix\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "flix",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "flix.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:angelacaq\/-FBU-Project-1-Tipsy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77769D796CEEC9B9E7F7232BCCC23F97B9E3B55E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/angelacaq\/flix.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4214263FC2931A52463E73F356FF64433033EAC"
+    }
+  ]
+}
