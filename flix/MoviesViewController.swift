@@ -22,6 +22,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         
+        loadDataFromNetwork()
+        
+        // Initialize a UIRefreshControl
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(loadDataFromNetwork(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+    }
+    
+    func loadDataFromNetwork(refreshControl: UIRefreshControl? = nil) {
+        // Display HUD right before the request is made & make a network request
+        if refreshControl == nil {
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        }
+        
         let apiKey = "a8b0132bbb48b3a30cb7757d88fea788"
         let url = NSURL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
         let request = NSURLRequest(
@@ -35,25 +49,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             delegateQueue: NSOperationQueue.mainQueue()
         )
         
-        // Display HUD right before the request is made
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        
         let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,completionHandler: { (dataOrNil, response, error) in
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
-                    print("response: \(responseDictionary)")
-                    
                     self.movies = responseDictionary["results"] as? [NSDictionary]
                     self.tableView.reloadData()
-                    
                 }
             }
             
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            if let refreshControl = refreshControl {
+                // Tell the refreshControl to stop spinning
+                refreshControl.endRefreshing()
+            } else {
+                // Ends loading state
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+            }
         })
         task.resume()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
