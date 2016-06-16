@@ -14,19 +14,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var switchButton: UIBarButtonItem!
     
     var movies: [NSDictionary]?
+    var isCell = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Navigation Bar
-        let switchView = UIBarButtonItem(title: " ⌗", style: .Plain, target: nil, action: nil)
         if let font = UIFont(name: "Arial", size: 30) {
-            switchView.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+            switchButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
         }
-        navigationItem.leftBarButtonItem = switchView
-        
         
         // Error message
         errorView.hidden = true
@@ -117,16 +117,25 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    /*func switchGrid() {
+        let gridView = self.storyboard?.instantiateViewControllerWithIdentifier("GridMoviesViewController") as! GridMoviesViewController
+        
+        self.navigationController?.pushViewController(gridView, animated: true)
+    }*/
+    
      // MARK: - Navigation
-     
+    
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPathForCell(cell)
-        let movie = movies![indexPath!.row]
+        print(segue.identifier)
+        if segue.identifier == "DetailSegue" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let movie = movies![indexPath!.row]
         
-        let detailViewController = segue.destinationViewController as! DetailViewController
-        detailViewController.movie = movie
+            let detailViewController = segue.destinationViewController as! DetailViewController
+            detailViewController.movie = movie
+        }
         
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
