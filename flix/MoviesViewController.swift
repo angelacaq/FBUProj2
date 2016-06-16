@@ -12,12 +12,15 @@ import MBProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [NSDictionary]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        errorView.hidden = true
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,6 +34,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func loadDataFromNetwork(refreshControl: UIRefreshControl? = nil) {
+        self.errorView.hidden = true
         // Display HUD right before the request is made & make a network request
         if refreshControl == nil {
             MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -55,6 +59,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                     self.movies = responseDictionary["results"] as? [NSDictionary]
                     self.tableView.reloadData()
                 }
+            } else {
+                // Network error
+                self.errorView.hidden = false
             }
             
             if let refreshControl = refreshControl {
