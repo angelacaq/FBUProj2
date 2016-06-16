@@ -20,6 +20,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Navigation Bar
+        let switchView = UIBarButtonItem(title: " ⌗", style: .Plain, target: nil, action: nil)
+        if let font = UIFont(name: "Arial", size: 30) {
+            switchView.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }
+        navigationItem.leftBarButtonItem = switchView
+        
+        
+        // Error message
         errorView.hidden = true
         
         tableView.dataSource = self
