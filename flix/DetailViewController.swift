@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
         
         let gradientView: CAGradientLayer = CAGradientLayer()
         gradientView.frame = overlayView.bounds
-        gradientView.colors = [UIColor.clearColor().CGColor, UIColor.whiteColor().CGColor]
+        gradientView.colors = [UIColor.clearColor().CGColor, UIColor.blackColor().CGColor]
         gradientView.locations = [0.0, 0.5]
         overlayView.layer.mask = gradientView
         

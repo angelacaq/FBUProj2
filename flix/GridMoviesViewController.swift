@@ -34,6 +34,7 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate, UISe
             self.navigationItem.leftBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
         }
         
+        
         filteredData = movies
     }
     
@@ -71,6 +72,7 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate, UISe
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.setValue("Done", forKey:"_cancelButtonText")
         self.searchBar.showsCancelButton = true
     }
     
@@ -87,7 +89,7 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate, UISe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPathForCell(cell)
-        let movie = movies![indexPath!.row]
+        let movie = filteredData![indexPath!.row]
         
         let detailViewController = segue.destinationViewController as! DetailViewController
         detailViewController.movie = movie
