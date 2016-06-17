@@ -49,6 +49,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 - [HCSStarRatingView](https://github.com/hsousa/HCSStarRatingView) - basic star rating interface
 - [Pexels](https://www.pexels.com/photo/camera-event-live-settings-66134/) - film stock photo
+- [iconmonstr.com](http://iconmonstr.com/magnifier-5/?png) - magnifying glass icon
 
 ## License
 

@@ -30,7 +30,7 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate, UISe
         
         // remove back animation & increase font size
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "≡", style: .Plain, target: self, action: #selector(GridMoviesViewController.backTapped(_:)))
-        if let font = UIFont(name: "Arial", size: 25) {
+        if let font = UIFont(name: "Arial", size: 30) {
             self.navigationItem.leftBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
         }
         
