@@ -16,14 +16,16 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 
 - [X] User sees an error message when there's a networking error.
-- [ ] Movies are displayed using a CollectionView instead of a TableView.
+- [X] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
 - [ ] Customize the UI.
 
 The following **additional** features are implemented:
 
-- [X] Incorporated details screen where users can see large poster, movie title, and full overview
+- [X] Incorporate details screen where users can see large poster, movie title, and full overview
+- [X] Customize the navigation bar
+- [X] Customize the selection effect of the cell (by removing it)
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -40,7 +42,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-- Had a bug involving pull to refresh, but turned out to be an issue only in the emulator
+** TODO **
+- Include refresh and loading state on CollectionView screen
+
+** ISSUES **
 
 ## Credits
 

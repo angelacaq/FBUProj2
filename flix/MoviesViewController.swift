@@ -19,7 +19,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     var movies: [NSDictionary]?
     var isCell = false
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +43,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func loadDataFromNetwork(refreshControl: UIRefreshControl? = nil) {
         self.errorView.hidden = true
+        
         // Display HUD right before the request is made & make a network request
         if refreshControl == nil {
             MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -117,24 +117,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    /*func switchGrid() {
-        let gridView = self.storyboard?.instantiateViewControllerWithIdentifier("GridMoviesViewController") as! GridMoviesViewController
-        
-        self.navigationController?.pushViewController(gridView, animated: true)
-    }*/
-    
      // MARK: - Navigation
     
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(segue.identifier)
         if segue.identifier == "DetailSegue" {
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
             let movie = movies![indexPath!.row]
+            
+            cell.selectionStyle = .None
         
             let detailViewController = segue.destinationViewController as! DetailViewController
             detailViewController.movie = movie
+        } else {
+            let detailViewController = segue.destinationViewController as! GridMoviesViewController
+            detailViewController.movies = movies
+            
         }
         
      // Get the new view controller using segue.destinationViewController.
