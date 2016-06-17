@@ -38,10 +38,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-** TODO **
+**TODO**
 - Include refresh and loading state on CollectionView screen
 
-** ISSUES **
+**ISSUES**
 - Strange bug on emulator with the pull to refresh, but doesn't seem present on an actual device
 
 ## Credits
