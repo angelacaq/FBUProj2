@@ -19,7 +19,7 @@ The following **optional** features are implemented:
 - [X] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
-- [X] Customize the UI. // Included a different TableView design, gradients, etc.
+- [X] Customize the UI. (included a different TableView design, gradients, etc.)
 
 The following **additional** features are implemented:
 
@@ -27,6 +27,7 @@ The following **additional** features are implemented:
 - [X] Incorporate details screen where users can see large poster, movie title, and full overview
 - [X] Customize the navigation bar
 - [X] Customize the selection effect of the cell (by removing it)
+- [X] Added rating stars which displays rating and number of votes
 
 ## Video Walkthrough
 

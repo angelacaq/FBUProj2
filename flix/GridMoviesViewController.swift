@@ -12,12 +12,15 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: [NSDictionary]?
+    // var filteredData: [NSDictionary]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         collectionView.dataSource = self
         collectionView.delegate = self
