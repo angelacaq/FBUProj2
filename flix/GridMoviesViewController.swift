@@ -8,33 +8,33 @@
 
 import UIKit
 
-class GridMoviesViewController: UIViewController, UICollectionViewDelegate {
+class GridMoviesViewController: UIViewController, UICollectionViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: [NSDictionary]?
-    // var filteredData: [NSDictionary]!
+    var filteredData: [NSDictionary]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         collectionView.dataSource = self
         collectionView.delegate = self
+        searchBar.delegate = self
         
         flowLayout.minimumLineSpacing = 3
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 4, 0, 4)
         
         // remove back animation & increase font size
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "≡", style: .Plain, target: self, action: "backTapped:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "≡", style: .Plain, target: self, action: #selector(GridMoviesViewController.backTapped(_:)))
         if let font = UIFont(name: "Arial", size: 25) {
             self.navigationItem.leftBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
         }
         
+        filteredData = movies
     }
     
     func backTapped(sender: UIBarButtonItem) {
@@ -45,7 +45,41 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        // When there is no text, filteredData is the same as the original data
+        if searchText.isEmpty {
+            filteredData = movies
+        } else {
+            // The user has entered text into the search box
+            // Use the filter method to iterate over all items in the data array
+            // For each item, return true if the item should be included and false if the
+            // item should NOT be included
+            filteredData = movies!.filter({(dataString: NSDictionary) -> Bool in
+                let dataItem = String(dataString["title"])
+                // If dataItem matches the searchText, return true to include it
+                if dataItem.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil {
+                    print(dataItem)
+                    return true
+                } else {
+                    return false
+                }
+            })
+        }
+        collectionView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+ 
     
     // MARK: - Navigation
 
@@ -58,21 +92,19 @@ class GridMoviesViewController: UIViewController, UICollectionViewDelegate {
         let detailViewController = segue.destinationViewController as! DetailViewController
         detailViewController.movie = movie
     }
-    
-
 }
 
 extension GridMoviesViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let movies = movies {
-            return movies.count
+        if let filteredData = filteredData {
+            return filteredData.count
         }
         return 0;
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell", forIndexPath: indexPath) as! MovieCollectionViewCell
-        let movie = movies![indexPath.row]
+        let movie = filteredData![indexPath.row]
         let baseURL = "http://image.tmdb.org/t/p/w500"
         
         if let posterPath = movie["poster_path"] as? String {
