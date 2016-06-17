@@ -18,7 +18,7 @@ The following **optional** features are implemented:
 - [X] User sees an error message when there's a networking error.
 - [X] Movies are displayed using a CollectionView instead of a TableView.
 - [X] User can search for a movie.
-- [ ] All images fade in as they are loading.
+- [X] All images fade in as they are loading.
 - [X] Customize the UI. (included a different TableView design, gradients, etc.)
 
 The following **additional** features are implemented:
@@ -39,9 +39,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-**TODO**
-- Include refresh and loading state on CollectionView screen
-
 **ISSUES**
 - Strange bug on emulator with the pull to refresh, but doesn't seem present on an actual device
 
@@ -50,6 +47,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+- [HCSStarRatingView](https://github.com/hsousa/HCSStarRatingView) - basic star rating interface
+- [Pexels](https://www.pexels.com/photo/camera-event-live-settings-66134/) - film stock photo
 
 ## License
 

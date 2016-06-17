@@ -16,6 +16,7 @@
 		D397668D1D11EEC100EA4F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D397668B1D11EEC100EA4F22 /* LaunchScreen.storyboard */; };
 		D39766951D11EF8400EA4F22 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39766941D11EF8400EA4F22 /* MoviesViewController.swift */; };
 		D39766981D11F9C500EA4F22 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39766971D11F9C500EA4F22 /* MovieCell.swift */; };
+		D3B3B77F1D14A92000F94BF2 /* film.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D3B3B77E1D14A92000F94BF2 /* film.jpeg */; };
 		D48561E0EFB26F80ED6CA07A /* Pods_flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC23D6F0FB670E753A965363 /* Pods_flix.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D397668E1D11EEC100EA4F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39766941D11EF8400EA4F22 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		D39766971D11F9C500EA4F22 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		D3B3B77E1D14A92000F94BF2 /* film.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = film.jpeg; path = ../../../film.jpeg; sourceTree = "<group>"; };
 		DC23D6F0FB670E753A965363 /* Pods_flix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		D39766991D11F9D400EA4F22 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3B77E1D14A92000F94BF2 /* film.jpeg */,
 				D39766941D11EF8400EA4F22 /* MoviesViewController.swift */,
 				D35052E91D1353B30054F7EC /* DetailViewController.swift */,
 				D35052EB1D13621A0054F7EC /* GridMoviesViewController.swift */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D397668D1D11EEC100EA4F22 /* LaunchScreen.storyboard in Resources */,
+				D3B3B77F1D14A92000F94BF2 /* film.jpeg in Resources */,
 				D397668A1D11EEC100EA4F22 /* Assets.xcassets in Resources */,
 				D39766881D11EEC100EA4F22 /* Main.storyboard in Resources */,
 			);

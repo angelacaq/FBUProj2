@@ -105,11 +105,31 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let overview = movie["overview"] as! String
 
         let baseURL = "http://image.tmdb.org/t/p/w500"
+        let posterPath = movie["poster_path"] as? String
+        let imageRequest = NSURLRequest(URL:NSURL(string: baseURL + posterPath!)!)
         
-        if let posterPath = movie["poster_path"] as? String {
-            let imageURL = NSURL(string: baseURL + posterPath)
-            cell.posterView.setImageWithURL(imageURL!)
-        }
+        cell.posterView.setImageWithURLRequest(
+            imageRequest,
+            placeholderImage: nil,
+            success: { (imageRequest, imageResponse, image) -> Void in
+                
+                // imageResponse will be nil if the image is cached
+                if imageResponse != nil {
+                    cell.posterView.alpha = 0.0
+                    cell.posterView.image = image
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        cell.posterView.alpha = 1.0
+                    })
+                } else {
+                    cell.posterView.image = image
+                }
+            },
+            failure: { (imageRequest, imageResponse, error) -> Void in
+                // do something for the failure condition
+                let filmImageURL = "film.jpeg"
+                let filmImage = UIImage(named: filmImageURL)
+                cell.posterView.image = filmImage
+        })
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
