@@ -220,7 +220,7 @@
             </objects>
             <point key="canvasLocation" x="-226" y="285"/>
         </scene>
-        <!--Movies-->
+        <!--Search-->
         <scene sceneID="urm-cp-0EI">
             <objects>
                 <viewController id="2QS-YY-Vy1" customClass="GridMoviesViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCollectionCell" id="jFV-w7-g3F" customClass="MovieCollectionViewCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="259"/>
+                                        <rect key="frame" x="0.0" y="64" width="182" height="259"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="259"/>
@@ -268,7 +268,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.78565705128205132" green="0.78565705128205132" blue="0.78565705128205132" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="OuM-xC-FGj"/>
+                    <navigationItem key="navigationItem" title="Search" id="OuM-xC-FGj"/>
                     <connections>
                         <outlet property="collectionView" destination="gDE-uz-pQG" id="bv5-Bx-7I3"/>
                         <outlet property="flowLayout" destination="7GZ-Fl-v3a" id="rUr-j6-zmo"/>
@@ -284,6 +284,6 @@
         <image name="searchicon.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="geH-1b-AVy"/>
+        <segue reference="WUw-Se-MYO"/>
     </inferredMetricsTieBreakers>
 </document>
