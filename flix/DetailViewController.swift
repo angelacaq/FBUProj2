@@ -17,6 +17,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewTextView: UITextView!
     @IBOutlet weak var starRating: HCSStarRatingView!
     @IBOutlet weak var NumReviewLabel: UILabel!
+    @IBOutlet weak var showtimeButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    
+    
+    @IBOutlet weak var ticketButton: UIButton!
     
     var movie: NSDictionary!
     
@@ -49,11 +54,32 @@ class DetailViewController: UIViewController {
             let imageURL = NSURL(string: baseURL + posterPath)
             posterImageView.setImageWithURL(imageURL!)
         }
+        
+        infoButton.layer.borderWidth = 1
+        infoButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        showtimeButton.layer.borderWidth = 1
+        showtimeButton.layer.borderColor = UIColor.whiteColor().CGColor
+    }
     
-        
-        
+    @IBAction func showtimeAction(sender: AnyObject) {
+        let baseURL = "http://www.fandango.com/search?q="
+        let filmTitle = movie["title"] as! String
+        let combo = String(baseURL + filmTitle)
+        let comboURL = combo.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        print(comboURL)
+        UIApplication.sharedApplication().openURL(NSURL(string: comboURL)!)
     }
 
+    @IBAction func infoAction(sender: AnyObject) {
+        let baseURL = "http://www.imdb.com/find?s=all&q="
+        let filmTitle = movie["title"] as! String
+        let combo = String(baseURL + filmTitle)
+        let comboURL = combo.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        print(comboURL)
+        UIApplication.sharedApplication().openURL(NSURL(string: comboURL)!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

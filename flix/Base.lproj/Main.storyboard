@@ -13,17 +13,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="307" sectionHeaderHeight="28" sectionFooterHeight="28" id="pxE-Be-xwQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="313" sectionHeaderHeight="28" sectionFooterHeight="28" id="pxE-Be-xwQ">
                                 <rect key="frame" x="0.0" y="15" width="375" height="652"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.71238670069999999" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="307" id="h0L-lH-5MY" customClass="MovieCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="307"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="313" id="h0L-lH-5MY" customClass="MovieCell" customModule="flix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="313"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h0L-lH-5MY" id="xfw-mY-NFt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="313"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bCC-N5-ePE">
@@ -49,12 +49,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" id="IIU-hg-aIg">
-                                                            <rect key="frame" x="-8" y="91" width="367" height="20"/>
+                                                            <rect key="frame" x="-9" y="97" width="367" height="27"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.92666266022564103" green="0.92666266022564103" blue="0.92666266022564103" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.83133012817435903" green="0.83133012817435903" blue="0.83133012817435903" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -120,7 +120,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" editable="NO" text="Overview" textAlignment="justified" id="jvd-Ee-Jr4">
-                                        <rect key="frame" x="20" y="301" width="329" height="143"/>
+                                        <rect key="frame" x="20" y="239" width="329" height="143"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,14 +128,14 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aaU-Q5-yrz">
-                                        <rect key="frame" x="25" y="253" width="324" height="58"/>
+                                        <rect key="frame" x="25" y="191" width="324" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" id="fZk-zq-a00" customClass="HCSStarRatingView">
-                                        <rect key="frame" x="25" y="238" width="85" height="16"/>
+                                        <rect key="frame" x="25" y="176" width="85" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="1" green="0.97079244771966822" blue="0.10200132243793048" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,12 +145,34 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="## Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zy2-8w-glQ">
-                                        <rect key="frame" x="118" y="236" width="116" height="21"/>
+                                        <rect key="frame" x="118" y="174" width="116" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="la4-dg-OK8">
+                                        <rect key="frame" x="190" y="402" width="156" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Showtimes">
+                                            <color key="titleColor" red="0.97902962989999998" green="1" blue="0.99168065999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showtimeAction:" destination="IE0-Id-I2k" eventType="touchUpInside" id="HiW-S1-lcZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="etR-nT-4K1">
+                                        <rect key="frame" x="23" y="402" width="156" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="More Info">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="infoAction:" destination="IE0-Id-I2k" eventType="touchUpInside" id="euS-C1-mfk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.03898237179487174" green="0.0018931748106137353" blue="0.0029882146462766766" alpha="0.74436961206896557" colorSpace="calibratedRGB"/>
                             </view>
@@ -161,10 +183,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="NumReviewLabel" destination="Zy2-8w-glQ" id="pMx-nQ-95i"/>
+                        <outlet property="infoButton" destination="etR-nT-4K1" id="QMA-X8-glF"/>
                         <outlet property="overlayView" destination="1yg-Hx-jfh" id="8Pz-F4-b6t"/>
                         <outlet property="overviewTextView" destination="jvd-Ee-Jr4" id="KhP-4L-YdK"/>
                         <outlet property="posterImageView" destination="zLu-sX-Gh8" id="9yb-pB-Xni"/>
+                        <outlet property="showtimeButton" destination="la4-dg-OK8" id="kdH-oy-uZq"/>
                         <outlet property="starRating" destination="fZk-zq-a00" id="DMk-ba-Dqn"/>
+                        <outlet property="ticketButton" destination="etR-nT-4K1" id="Oh7-Xg-qjm"/>
                         <outlet property="titleLabel" destination="aaU-Q5-yrz" id="aOP-ew-l3b"/>
                     </connections>
                 </viewController>
@@ -215,7 +240,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCollectionCell" id="jFV-w7-g3F" customClass="MovieCollectionViewCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="182" height="259"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="259"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="259"/>
@@ -259,6 +284,6 @@
         <image name="searchicon.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WUw-Se-MYO"/>
+        <segue reference="geH-1b-AVy"/>
     </inferredMetricsTieBreakers>
 </document>
