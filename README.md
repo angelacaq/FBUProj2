@@ -2,7 +2,7 @@
 
 Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **11** hours spent in total
+Time spent: **16** hours spent in total
 
 ## User Stories
 
@@ -33,11 +33,12 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories. Click to watch video:
 
 [![Video Walkthrough](https://img.youtube.com/vi/jtAbyCUkTmI/0.jpg)](https://www.youtube.com/watch?v=jtAbyCUkTmI)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='http://i.imgur.com/597p0II.png' width='' /> <img src='http://i.imgur.com/8o3RK1y.png' width='' />
+<img src='http://i.imgur.com/RrDaGOo.png' width='' /> <img src='http://i.imgur.com/b3XDnBP.png' width='' />
 
 ## Notes
 
