@@ -27,13 +27,15 @@ The following **additional** features are implemented:
 - [X] Incorporate details screen where users can see large poster, movie title, and full overview
 - [X] Customize the navigation bar
 - [X] Customize the selection effect of the cell (by removing it)
-- [X] Added rating stars which displays rating and number of votes
+- [X] Add rating stars which displays rating and number of votes
+- [X] Add icons
+- [X] Include links to Fandango (for showtimes) and iMDB (for movie info)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/PLKd8R9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[![Video Walkthrough](https://img.youtube.com/vi/jtAbyCUkTmI/0.jpg)](https://www.youtube.com/watch?v=jtAbyCUkTmI)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
